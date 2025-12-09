@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mamba Design System - Birleştirilmiş Landing ve Blog</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+         
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mamba-purple': '#6C2BD9',      /* Landing Page Moru */
+                        'mamba-light': '#F8F8F8',       /* Landing Page Gri Arka Planı */
+                        'mamba-light-blue': '#EEF2FF',  /* Mamba 2. Sayfa Etiket Mavi/Moru */
+                        'mamba-text-dark': '#1F2937',   /* Mamba 2. Sayfa Koyu Metni */
+                        'portfolio-dark': '#293241',    /* Kullanılmayan Koyu Renk tanımı (korundu) */
+                    },
+                    spacing: { '2.5': '0.625rem' },
+                    boxShadow: {
+                        'custom': '0 4px 10px rgba(0, 0, 0, 0.05)', /* Mamba 2. Sayfamdaki Kart gölgesi */
+                    }
+                }
+            }
+        }
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Landing Page Kartları İçin Özel Gölge */
+        .card-shadow {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.03), 0 4px 6px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(0, 0, 0, 0.07);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <div class="bg-white">
+        <header class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold text-mamba-purple flex items-center">
+                <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+            </div>
+            
+            <nav class="flex items-center space-x-6">
+                <a href="#blog-section" class="text-sm font-medium text-gray-700 hover:text-mamba-purple transition duration-150">Blog</a>
+                <a href="#" class="text-sm font-medium text-gray-700 hover:text-mamba-purple transition duration-150">Link</a>
+                <a href="#" class="text-sm font-medium text-gray-700 hover:text-mamba-purple transition duration-150">Link</a>
+                <button class="px-5 py-2.5 text-sm font-semibold bg-mamba-purple text-white rounded-lg hover:bg-mamba-purple/90 transition duration-150 shadow-md">
+                    Sign up
+                </button>
+            </nav>
+        </header>
+
+        <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-24">
+            <div class="flex flex-col lg:flex-row lg:items-start space-y-10 lg:space-y-0 lg:space-x-12">
+                
+                <div class="w-full lg:w-1/2 max-w-lg lg:max-w-none">
+                    <p class="text-xs tracking-widest uppercase text-mamba-purple font-semibold mb-2">Mamba design system</p>
+                    <h1 class="text-5xl font-extrabold leading-tight mb-4">Build it with Mamba</h1>
+                    <p class="text-base text-gray-500 mb-8">Modular and versatile. The ultimate design toolkit for savvy technology startups.</p>
+                    
+                    <div class="space-y-2.5 max-w-sm">
+                        <input type="text" placeholder="Your name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-mamba-purple focus:border-mamba-purple outline-none transition duration-150" />
+                        <input type="email" placeholder="Email address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-mamba-purple focus:border-mamba-purple outline-none transition duration-150" />
+                        <button class="w-full px-4 py-3 text-white font-semibold bg-mamba-purple rounded-lg shadow-lg hover:bg-mamba-purple/90 transition duration-150">
+                            Join the waitlist
+                        </button>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 h-80 lg:h-96 rounded-xl overflow-hidden bg-gray-100 shadow-xl card-shadow">
+                    <img src="https://picsum.photos/300/400?random=1" alt="Modern Mimari" class="w-full h-full object-cover"/>
+                </div>
+            </div>
+        </main>
+
+        <section class="bg-mamba-light py-20">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-xs tracking-widest uppercase text-mamba-purple font-semibold text-center mb-2">HOW IT WORKS</p>
+                <h2 class="text-4xl font-extrabold text-center mb-16">Building with Mamba is simple</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white p-8 rounded-xl card-shadow text-center">
+                        <span class="inline-flex items-center justify-center w-8 h-8 bg-mamba-purple text-white text-sm font-bold rounded-full mb-4">1</span>
+                        <h3 class="text-lg font-bold mb-3">Nulla. Nostrum, corrupti blandit is. Illum, architecto?</h3>
+                        <p class="text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl card-shadow text-center">
+                        <span class="inline-flex items-center justify-center w-8 h-8 bg-mamba-purple text-white text-sm font-bold rounded-full mb-4">2</span>
+                        <h3 class="text-lg font-bold mb-3">Accusantium. Vitae saepe atque neque sunt eius dolor veniam alias debitis?</h3>
+                        <p class="text-gray-500">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl card-shadow text-center">
+                        <span class="inline-flex items-center justify-center w-8 h-8 bg-mamba-purple text-white text-sm font-bold rounded-full mb-4">3</span>
+                        <h3 class="text-lg font-bold mb-3">Maxime. Expedita temporibus culpa reprehenderit debit is consectetur odio!</h3>
+                        <p class="text-gray-500">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="blog-section" class="pt-20 pb-20 text-mamba-text-dark">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <header class="mb-16 max-w-3xl mx-auto text-left lg:text-center">
+                <h1 class="text-4xl font-extrabold mb-4">Create with us</h1>
+                <p class="text-gray-500 text-base leading-relaxed">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascuntur facilis quod accusantium beatae cum nam adipisci reiciendis omnis praesentium error quo animi voluptas magni, et incidunt. Nulla ex et ullam corporis quidem adipisci vitae, perferendis dolorem libero minus atque tenetur enim pariatur cupiditate commodi in beatae, ipsa eligendi? Quis, saepe.
+                </p>
+            </header>
+
+            <section class="max-w-4xl mx-auto mb-16">
+                <div class="flex flex-col lg:flex-row bg-white rounded-xl shadow-custom overflow-hidden border border-gray-100">
+                    
+                    <div class="lg:w-1/2 h-64 lg:h-auto">
+                        <img src="https://picsum.photos/id/400/800/600" alt="Çöl Manzarası" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="lg:w-1/2 p-8 flex flex-col justify-center space-y-4">
+                        <span class="inline-block text-xs font-semibold px-3 py-1 rounded-full bg-mamba-light-blue text-mamba-purple tracking-widest uppercase self-start">
+                            Business
+                        </span>
+                        <h2 class="text-2xl font-bold leading-snug">Curating a workplace that inspires team movement</h2>
+                        <p class="text-gray-500 text-sm">
+                            November 30, 2020<br>
+                            By Gülşah BALLI GİRDAP
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto mb-20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-left">
+                    
+                    <div class="p-4">
+                        <p class="font-semibold mb-1">Panel-based blocks.</p>
+                        <p class="text-gray-500">Flexible panels that are perfect for building functional layouts.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <p class="font-semibold mb-1">Responsive design.</p>
+                        <p class="text-gray-500">Panels look great no matter the device.</p>
+                    </div>
+                    
+                    <div class="p-4">
+                        <p class="font-semibold mb-1">Premium support.</p>
+                        <p class="text-gray-500">Join over 50 000 satisfied customers who use our templates.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="max-w-4xl mx-auto text-center mb-24">
+                <h2 class="text-3xl font-extrabold mb-4">Our team is here to help you.</h2>
+                <a href="#" class="text-mamba-purple font-semibold text-lg hover:text-mamba-purple/80 transition inline-flex items-center">
+                    Meet our crew 
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                </a>
+
+                <div class="mt-12 rounded-xl overflow-hidden shadow-custom border border-gray-100">
+                    <img src="https://picsum.photos/id/321/1000/500" alt="Takım Çalışma Alanı" class="w-full h-auto object-cover">
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="bg-gray-50 py-8 border-t border-gray-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center text-gray-500 text-sm">
+                <p>Mamba</p>
+                <div class="space-x-4">
+                    <a href="#" class="hover:text-mamba-purple transition">
+                        <svg class="w-5 h-5 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M17.3 6.6c.7-.6.7-1.7 0-2.3l-1.3-1.3c-.6-.6-1.7-.6-2.3 0L10 6.1 6.3 2.4c-.6-.6-1.7-.6-2.3 0L2.7 3.7c-.6.6-.6 1.7 0 2.3L6.4 10l-3.7 3.7c-.6.6-.6 1.7 0 2.3l1.3 1.3c.6.6 1.7.6 2.3 0L10 13.9l3.7 3.7c.6.6 1.7.6 2.3 0l1.3-1.3c.6-.6.6-1.7 0-2.3L13.6 10l3.7-3.4z"></path></svg>
+                    </a>
+                    <a href="#" class="hover:text-mamba-purple transition">
+                        <svg class="w-5 h-5 inline" fill="currentColor" viewBox="0 0 20 20"><path d="M17.3 6.6c.7-.6.7-1.7 0-2.3l-1.3-1.3c-.6-.6-1.7-.6-2.3 0L10 6.1 6.3 2.4c-.6-.6-1.7-.6-2.3 0L2.7 3.7c-.6.6-.6 1.7 0 2.3L6.4 10l-3.7 3.7c-.6.6-.6 1.7 0 2.3l1.3 1.3c.6.6 1.7.6 2.3 0L10 13.9l3.7 3.7c.6.6 1.7.6 2.3 0l1.3-1.3c.6-.6.6-1.7 0-2.3L13.6 10l3.7-3.4z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </body>
+</html>
